@@ -66,13 +66,13 @@ const run = async (initial) => {
     designerResponse
   ];
   
-  await saveArrayToMarkdownFiles(chatHistory, path.join(__dirname, 'work', `result-${Date.now()}`));
+  await saveArrayToMarkdownFiles(chatHistory, path.join(__dirname, '..', 'work', `result-${Date.now()}`));
 };
 
 run(`I need to develop new social marketing strategy in facebook, instagram and telegram to promote nutrition bars`).then(async () => {
   console.log('work is finished. check out results');
 }).catch((error) => {
-  console.log('Work finished with error:', JSON.stringify(error.response.data, null, 2));
+  console.log('Work finished with error:', error);
 });
 
 
@@ -95,7 +95,7 @@ function saveArrayToMarkdownFiles(array, projectFolder) {
 
 async function chatGPTRequest(system, prompt) {
   try {
-    const apiKey = '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'; // Replace with your actual API key
+    const apiKey = process.env.OPEN_API_KEY; // Replace with your actual API key https://platform.openai.com/account/api-keys
     const apiUrl = 'https://api.openai.com/v1/chat/completions'; // Replace with the API endpoint for Chat GPT
     
     if (!apiKey) {
@@ -130,10 +130,14 @@ async function chatGPTRequest(system, prompt) {
       },
     });
     
+    console.log(`------------------`);
+    console.log('System message:',system);
+    console.log('Prompt:',prompt);
+    console.log('Response:',response.data.choices[0].message.content);
+    
     return response.data.choices[0].message.content;
   } catch (error) {
     console.error('Error communicating with Chat GPT API', error.message);
-    console.log(process.env.OPENAI_API_KEY);
     throw error;
   }
 }

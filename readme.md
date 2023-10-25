@@ -9,7 +9,7 @@ These instructions will help you get a copy of the project up and running on you
 ### Prerequisites
 
 - [Node.js](https://nodejs.org/) installed on your machine.
-- An OpenAI API key, which can be obtained from [openai.com](https://openai.com/).
+- An OpenAI API key, which can be obtained from [openai.com](https://platform.openai.com/account/api-keys).
 
 ### Installation
 
@@ -24,7 +24,7 @@ These instructions will help you get a copy of the project up and running on you
 
 3. Configure environment variables:
    ```sh
-   cp .env.example .env
+   cp .exmaple.env .env
    ```
    Open `.env` in your favorite text editor and paste your OpenAI API key.
 
@@ -34,4 +34,4 @@ These instructions will help you get a copy of the project up and running on you
    ```
 
 ### Usage: 
-Go to src/index.js and change initial task request, change system prompts as you wish, create chatPGT chain of prompts to complete your task
+Go to `src/scenarios`, duplicate `social-media-marketing-campaign.js` and change initial task request, change system prompts as you wish, create chatPGT chain of prompts to complete your own task
