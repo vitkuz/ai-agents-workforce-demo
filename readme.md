@@ -30,8 +30,10 @@ These instructions will help you get a copy of the project up and running on you
 
 4. To test run the project:
    ```sh
-   npm start
+   npm run start:ssm
+   npm run start:software-development
    ```
+   Check out your results in `work` folder.
 
 ### Usage: 
-Go to `src/scenarios`, duplicate `social-media-marketing-campaign.js` and change initial task request, change system prompts as you wish, create chatPGT chain of prompts to complete your own task
+Go to `src/scenarios`, duplicate `social-media-marketing-campaign.js` and change initial task request, change system prompts as you wish, create chatPGT chain of prompts to complete your own task run script again.

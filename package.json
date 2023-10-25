@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/scenarios/social-media-marketing-campaign.js"
+    "start:ssm": "node src/scenarios/social-media-marketing-campaign.js",
+    "start:software-development": "node src/scenarios/develop-software.js"
   },
   "keywords": [],
   "author": "",
