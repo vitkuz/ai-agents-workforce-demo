@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start:ssm": "node src/scenarios/social-media-marketing-campaign.js",
-    "start:software-development": "node src/scenarios/develop-software.js"
+    "start:software-development": "node src/scenarios/develop-software-v2.js"
   },
   "keywords": [],
   "author": "",
